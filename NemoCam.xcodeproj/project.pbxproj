@@ -12,6 +12,9 @@
 		3ED828571CB8FD8600F67BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED828551CB8FD8600F67BB2 /* Main.storyboard */; };
 		3ED828591CB8FD8600F67BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED828581CB8FD8600F67BB2 /* Assets.xcassets */; };
 		3ED8285C1CB8FD8600F67BB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8285A1CB8FD8600F67BB2 /* LaunchScreen.storyboard */; };
+		3ED828651CB8FDB500F67BB2 /* CameraCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED828641CB8FDB500F67BB2 /* CameraCaptureHelper.swift */; };
+		3ED828671CB8FDC900F67BB2 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED828661CB8FDC900F67BB2 /* ImageView.swift */; };
+		3ED828691CB8FE9B00F67BB2 /* CausticRefraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED828681CB8FE9B00F67BB2 /* CausticRefraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3ED828581CB8FD8600F67BB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED8285B1CB8FD8600F67BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED8285D1CB8FD8600F67BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED828641CB8FDB500F67BB2 /* CameraCaptureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureHelper.swift; sourceTree = "<group>"; };
+		3ED828661CB8FDC900F67BB2 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		3ED828681CB8FE9B00F67BB2 /* CausticRefraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CausticRefraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		3ED828501CB8FD8600F67BB2 /* NemoCam */ = {
 			isa = PBXGroup;
 			children = (
+				3ED828631CB8FDA600F67BB2 /* classes */,
 				3ED828511CB8FD8600F67BB2 /* AppDelegate.swift */,
 				3ED828531CB8FD8600F67BB2 /* ViewController.swift */,
 				3ED828551CB8FD8600F67BB2 /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				3ED8285D1CB8FD8600F67BB2 /* Info.plist */,
 			);
 			path = NemoCam;
+			sourceTree = "<group>";
+		};
+		3ED828631CB8FDA600F67BB2 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				3ED828641CB8FDB500F67BB2 /* CameraCaptureHelper.swift */,
+				3ED828661CB8FDC900F67BB2 /* ImageView.swift */,
+				3ED828681CB8FE9B00F67BB2 /* CausticRefraction.swift */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED828671CB8FDC900F67BB2 /* ImageView.swift in Sources */,
+				3ED828651CB8FDB500F67BB2 /* CameraCaptureHelper.swift in Sources */,
 				3ED828541CB8FD8600F67BB2 /* ViewController.swift in Sources */,
+				3ED828691CB8FE9B00F67BB2 /* CausticRefraction.swift in Sources */,
 				3ED828521CB8FD8600F67BB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

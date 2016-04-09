@@ -8,18 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CameraCaptureHelperDelegate
+{
+    var time: CGFloat = 0
+    
+    let imageView = OpenGLImageView()
+    let cameraCaptureHelper = CameraCaptureHelper(cameraPosition: .Back)
+    
+    let causticRefraction: CausticRefraction =
+    {
+        let filter = CausticRefraction()
+        
+        filter.inputSoftening = 5
+        filter.inputRefractiveIndex = -8
+        filter.inputLensScale = 65
+        
+        return filter
+    }()
 
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.addSubview(imageView)
+        
+        cameraCaptureHelper.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidLayoutSubviews()
+    {
+        imageView.frame = view.bounds
     }
-
-
+    
+    override func prefersStatusBarHidden() -> Bool
+    {
+        return true
+    }
+    
+    
+    func newCameraImage(cameraCaptureHelper: CameraCaptureHelper, image: CIImage)
+    {
+        causticRefraction.inputImage = image
+        causticRefraction.inputTime = time
+        
+        time += 0.04
+        
+        imageView.image = causticRefraction.outputImage
+    }
 }
-
